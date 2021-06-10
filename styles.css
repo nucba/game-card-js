@@ -1,11 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   /* color: #3474a4; */
-  font-family: "Montserrat", sans-serif;
-  color: white;
 }
 
 body {
@@ -16,15 +15,13 @@ body {
 
 main {
   margin: auto;
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
 }
 
 main h1 {
+  color: white;
   text-align: center;
   margin: 20px;
-  width: 100%;
+  font-family: "Montserrat", sans-serif;
 }
 
 .memoria-board {
@@ -69,49 +66,4 @@ main h1 {
 
 .card-front {
   transform: rotateY(180deg);
-}
-
-main .botonera {
-  width: 300px;
-}
-
-.botones {
-  display: inline-block;
-  width: 220px;
-  margin: 10px 0;
-  border: none;
-  background: #013e5b;
-  padding: 25px 15px;
-  border-radius: 0 15px 15px 0;
-  font-size: 1.2em;
-  box-shadow: 5px 5px 5px #000;
-  outline: none;
-  transition-property: width, background;
-  transition-duration: 1s;
-  transition-timing-function: ease-out;
-  cursor: pointer;
-  text-align: left;
-}
-
-.botones:hover {
-  width: 300px;
-  background: #cc22a7;
-}
-
-.visor {
-  display: inline-block;
-  width: 220px;
-  margin: 10px 0;
-  border: none;
-  background: #cc22a7;
-  padding: 25px 15px;
-  border-radius: 0 15px 15px 0;
-  font-size: 1.2em;
-  box-shadow: 5px 5px 5px #000;
-  text-align: center;
-}
-
-.visor span {
-  font-size: 2em;
-  font-weight: bold;
 }

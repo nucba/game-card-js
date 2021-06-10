@@ -46,14 +46,7 @@ function comprobarCoincidencia() {
 function deshabilitarCartas() {
   primeraCarta.removeEventListener("click", girar);
   segundaCarta.removeEventListener("click", girar);
-  console.log("acerte");
-  visorAciertos.textContent = Number(visorAciertos.textContent) + 1;
   resetearBareavle();
-  if (Number(visorAciertos.textContent) == Number(6)) {
-    setTimeout(() => {
-      ganar();
-    }, 800);
-  }
 }
 
 function devolverCartas() {
@@ -63,7 +56,6 @@ function devolverCartas() {
     segundaCarta.classList.remove("girar");
     tableroBloqueado = false;
     resetearBareavle();
-    restarMovimientos();
   }, 700);
 }
 
@@ -86,36 +78,6 @@ function mezclarCartas() {
     let numeritoRandomico = Math.floor(Math.random() * 12);
     carta.style.order = numeritoRandomico;
   });
-}
-
-const botonreset = document.getElementById("reset");
-botonreset.addEventListener("click", restart);
-const visorMovimientos = document.getElementById("visorMovimientos");
-const visorAciertos = document.getElementById("visorAciertos");
-let limite = 12;
-let aciertos = Number(0);
-visorMovimientos.textContent = limite;
-visorAciertos.textContent = aciertos;
-
-function restart() {
-  visorMovimientos.textContent = limite;
-  visorAciertos.textContent = aciertos;
-
-  cartas.forEach((carta) => carta.classList.remove("girar"));
-  cartasClickeables();
-}
-
-function restarMovimientos() {
-  visorMovimientos.textContent = visorMovimientos.textContent - 1;
-  if (visorMovimientos.textContent == 0) {
-    alert("Perdiste Rey");
-    restart();
-  }
-}
-
-function ganar() {
-  alert("Ganaste Corazon!");
-  restart();
 }
 
 // TAREA
